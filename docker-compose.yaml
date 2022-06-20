@@ -1,0 +1,22 @@
+version: '2.3'
+
+services:
+  web-springboot:
+    image: cherry_market:0.0.1
+    # container_name: cherry_market
+    environment:
+      - TZ=Asia/Seoul
+    
+    ports:
+      - 8088:8088
+
+    volumes: 
+      - ./cherry:/opt/cherry
+      - ./logs:/opt/dev_files
+      - /home/du9172/.vscode-server/extensions/:/root/.vscode-server/extensions/
+    tty: true
+
+    command: /bin/bash  
+
+  
+
