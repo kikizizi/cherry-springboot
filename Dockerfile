@@ -21,6 +21,9 @@ COPY ./dev_files/server.xml /var/lib/tomcat8/conf/server.xml
 
 WORKDIR /opt/cherry
 
-RUN mvn package
+RUN ./gradlew --refresh-dependencies
+RUN ./gradlew build
 
 RUN mv ./target/*.war /var/lib/tomcat8/webapps
+
+# RUN service tomcat8 restart

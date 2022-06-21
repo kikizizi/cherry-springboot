@@ -12,7 +12,7 @@ services:
 
     volumes: 
       - ./cherry:/opt/cherry
-      - ./logs:/opt/dev_files
+      - ./dev_files:/opt/dev_files
       - /home/du9172/.vscode-server/extensions/:/root/.vscode-server/extensions/
     tty: true
 
