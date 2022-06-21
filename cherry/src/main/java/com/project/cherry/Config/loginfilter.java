@@ -30,7 +30,7 @@ public class loginfilter {
 						encodeUrl=URLEncoder.encode(url+"?"+query);
 					}
 					ModelAndView mView=new ModelAndView();
-					mView.setViewName("redirect:/loginform.do?url="+encodeUrl);
+					mView.setViewName("redirect:/loginform?url="+encodeUrl);
 					return mView;
 				}
 			}

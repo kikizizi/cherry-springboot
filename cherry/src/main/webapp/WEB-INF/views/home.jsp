@@ -57,7 +57,7 @@
 					</c:when>
 					<c:otherwise>
 						<c:forEach var="dto" items="${list }">
-							<a href="detail.do?num=${dto.num }">
+							<a href="detail?num=${dto.num }">
 								<article class="productsArticle">
 									<img src="${pageContext.request.contextPath }${dto.imgPathList[0]}" alt="" />
 									<p class="title">${dto.title}</p>
