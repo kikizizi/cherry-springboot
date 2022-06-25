@@ -1,29 +1,10 @@
-FROM ubuntu:18.04
+FROM openjdk:8-jre-alpine
 
+ENV LANG=C.UTF-8
 
-ENV DEBIAN_FRONTEND=noninteractive \ 
-    LANG=C.UTF-8
+COPY ./cherry/build/libs/cherry-*-SNAPSHOT.war /opt/app.war
 
-RUN apt-get update && apt-get install -y \
-    openjdk-8-jdk \
-    wget \
-    git \
-    vim \
-    tzdata 
+WORKDIR /opt
 
-RUN apt-get update && apt-get install -y \
-    tomcat8 \
-    maven 
+ENTRYPOINT ["/bin/sh","-c","java -jar app.war"]
 
-COPY ./cherry /opt/cherry
-COPY ./dev_files/context.xml /var/lib/tomcat8/conf/context.xml
-COPY ./dev_files/server.xml /var/lib/tomcat8/conf/server.xml
-
-WORKDIR /opt/cherry
-
-RUN ./gradlew --refresh-dependencies
-RUN ./gradlew build
-
-RUN mv ./target/*.war /var/lib/tomcat8/webapps
-
-# RUN service tomcat8 restart
