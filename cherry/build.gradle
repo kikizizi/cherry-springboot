@@ -14,7 +14,6 @@ repositories {
 }
 
 dependencies {
-
 	implementation 'javax.servlet:jstl'
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -26,7 +25,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation group: 'org.springframework.security', name: 'spring-security-web', version: '5.7.1'
 	implementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
-	runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.0'
+	runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.9.1'
 	implementation group: 'org.springframework', name: 'spring-aop', version: '5.3.21'
 	implementation group: 'org.springframework.integration', name: 'spring-integration-stomp', version: '5.3.2.RELEASE'
 	implementation group: 'org.springframework', name: 'spring-messaging', version: '5.3.21'

@@ -75,16 +75,26 @@ public class productsServiceImpl implements productsService {
 		return Integer.toString(now_sec-reg_sec)+"초전";
 	}
 	private String saveImg(MultipartFile img,HttpServletRequest req) {
-		String realPath=req.getServletContext().getRealPath("/upload");
-		String filePath=realPath+File.separator;
-		File upload=new File(filePath);
-		if(!upload.exists()) {upload.mkdir();}
+		// String realPath=req.getSession().getServletContext().getRealPath("");
+		// System.out.println(realPath);
+		System.out.println("13:17");
+		// String filePath=realPath+File.separator;
+		// String filePath=File.separator;
+		// File upload=new File(filePath);
+		// System.out.println(upload.exists());
+		// if(!upload.exists()) {
+			// System.out.println("no exists");
+			// upload.mkdir();
+		// }
 		String saveFileName=System.currentTimeMillis()+img.getOriginalFilename();
 		try {
-			img.transferTo(new File(filePath+saveFileName));
+			// img.transferTo(new File("/media/"+saveFileName));
+			// System.out.println(filePath);
+			img.transferTo(new File("/opt/images/"+saveFileName));
 		}catch(Exception e) {
 			e.printStackTrace();
-		}
+		} 
+		System.out.println("/upload/"+saveFileName);
 		return "/upload/"+saveFileName;
 	}
 	private List<String> getImgPathList(productsDto dto,HttpServletRequest req) {

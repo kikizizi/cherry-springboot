@@ -59,7 +59,7 @@
 						<c:forEach var="dto" items="${list }">
 							<a href="detail?num=${dto.num }">
 								<article class="productsArticle">
-									<img src="${pageContext.request.contextPath }${dto.imgPathList[0]}" alt="" />
+									<img src="${dto.imgPathList[0]}" alt="" />
 									<p class="title">${dto.title}</p>
 									<p class="priceWon">${dto.priceWon }
 										<c:if test="${dto.wishCount != 0 }">
