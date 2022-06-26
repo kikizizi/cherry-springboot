@@ -13,3 +13,16 @@ services:
     
     volumes:
       - /mnt/hdd_0/data/cherry:/opt/images
+    restart: always
+    depends_on:
+      - oracle_db
+  oracle_db:
+    image: jaspeen/oracle-xe-11g
+    container_name: oracle_db
+    environment:
+      - TZ=Asia/Seoul
+    volumes:
+      - /mnt/hdd_0/db/oracle/cherry_market:/u01/app/oracle
+    ports:
+      - 1606:1521
+  
