@@ -1,13 +1,13 @@
 version: '2.3'
 
 services:
-  web-springboot:
+  dev_spring_cherry:
     image: cherry_market:0.0.1
     environment:
       - TZ=Asia/Seoul
     
     ports:
-      - 8088:8088
+      - 8088:8089
 
     volumes: 
       - ./cherry:/opt/cherry

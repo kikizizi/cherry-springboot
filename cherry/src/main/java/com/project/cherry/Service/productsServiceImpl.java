@@ -86,7 +86,7 @@ public class productsServiceImpl implements productsService {
 			// System.out.println("no exists");
 			// upload.mkdir();
 		// }
-		String saveFileName=System.currentTimeMillis()+img.getOriginalFilename();
+		String saveFileName=System.currentTimeMillis()+"img";
 		try {
 			// img.transferTo(new File("/media/"+saveFileName));
 			// System.out.println(filePath);
