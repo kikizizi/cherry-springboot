@@ -18,7 +18,7 @@
 					for (const item of data.list){
 						new_a='<a href="detail?num='+item.num+'">';
 						new_a+='<article class="productsArticle">';
-						new_a+='<img src="/cherry'+item.imgPathList[0]+'" alt="" />';
+						new_a+='<img src="'+item.imgPathList[0]+'" alt="" />';
 						new_a+='<p class="title">'+item.title+'</p>';
 						new_a+='<p class="priceWon">'+item.priceWon;
 						if (item.wishCount!=0){

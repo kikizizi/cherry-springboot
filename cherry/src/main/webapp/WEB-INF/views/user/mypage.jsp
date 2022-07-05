@@ -210,7 +210,7 @@ hr {
 					const new_article=document.createElement('article');
 					new_article.setAttribute('class','productsArticle');
 					const new_img=document.createElement('img');
-					new_img.setAttribute('src','/cherry'+item.imgPathList[0]);						
+					new_img.setAttribute('src',item.imgPathList[0]);						
 					const new_title=document.createElement('p');
 					new_title.innerText=item.title;
 					new_title.setAttribute('class','title');
@@ -242,7 +242,7 @@ hr {
 					const new_article=document.createElement('article');
 					new_article.setAttribute('class','productsArticle');
 					const new_img=document.createElement('img');
-					new_img.setAttribute('src','/cherry'+item.imgPathList[0]);
+					new_img.setAttribute('src',item.imgPathList[0]);
 					if (item.isSaled==1){
 						new_img.setAttribute('class','salesCompleted');
 					}
