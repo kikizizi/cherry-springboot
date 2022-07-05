@@ -3,8 +3,6 @@ version: '2.3'
 services:
   web-springboot:
     build: .
-    # image: cherry_market:0.0.1
-    # container_name: cherry_market
     environment:
       - TZ=Asia/Seoul
     

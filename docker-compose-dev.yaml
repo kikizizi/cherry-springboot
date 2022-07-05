@@ -7,7 +7,7 @@ services:
       - TZ=Asia/Seoul
     
     ports:
-      - 8088:8089
+      - 8089:8089
 
     volumes: 
       - ./cherry:/opt/cherry
