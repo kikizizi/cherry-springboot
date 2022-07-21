@@ -1,6 +1,6 @@
 CHERRY MARKET
 =============
-*<http://stone82.net:8088>
+*<http://goarcade.net:8088>
 
 ### 실행방법
 1. docker 설치
