@@ -9,6 +9,7 @@ CHERRY MARKET
 ./cherry/gradlew --refresh-dependencies
 ./cherry/gradlew clean build
 docker-compose up -d
+docker-compose -f docker-compose-db.yaml up -d
 ```
 
 #### 주의사항
